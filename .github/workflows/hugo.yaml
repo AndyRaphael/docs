@@ -54,7 +54,7 @@ build:
         HUGO_ENVIRONMENT: production
         HUGO_ENV: production
         run: |
-        hugo \
+          hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
@@ -74,3 +74,4 @@ deploy:
     - name: Deploy to GitHub Pages
       id: deployment
       uses: actions/deploy-pages@v2
+      
