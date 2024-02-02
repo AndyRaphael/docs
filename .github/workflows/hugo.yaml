@@ -40,7 +40,7 @@ build:
         && sudo dpkg -i ${{ runner.temp }}/hugo.deb
     - name: Checkout
       uses: actions/checkout@v4
-        with:
+      with:
         submodules: recursive
         fetch-depth: 0
     - name: Setup Pages
@@ -60,7 +60,7 @@ build:
             --baseURL "${{ steps.pages.outputs.base_url }}/"
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v1
-        with:
+      with:
         path: ./public
 
 # Deployment job
