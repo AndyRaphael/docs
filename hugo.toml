@@ -33,6 +33,9 @@ enableGitInfo = true
     url = "/docs/"
     identifier = "docs"
     weight = 10
+
+[permalinks.term]
+tags = "/docs/tags/:slug/"
     
 [params]
   [params.docs]
@@ -43,7 +46,7 @@ enableGitInfo = true
     prismTheme = "lotusdocs"
     
     # gitinfo
-    repoURL         = "https://github.com/AndyRaphael/docs.git"  # Git repository URL for your site 
+    repoURL         = "https://github.com/AndyRaphael/docs"  # Git repository URL for your site 
     repoBranch      = "master"
     editPage        = true                                # enable 'Edit this page' feature - default false
     lastMod         = true                                # enable 'Last modified' date on pages - default false
