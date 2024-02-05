@@ -1,6 +1,9 @@
 baseURL = 'https://andyraphael.github.io/docs/'
 languageCode = 'en-us'
 title = 'Andy Docs'
+contentDir = "content"
+enableEmoji = true
+
 
 [module]
     [[module.imports]]
@@ -10,11 +13,39 @@ title = 'Andy Docs'
         path = "github.com/gohugoio/hugo-mod-bootstrap-scss/v5"
         disable = false
 
-[markup.goldmark.renderer]
-    unsafe = true
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.tableOfContents]
+      endLevel = 3
+      startLevel = 1
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # https://jdhao.github.io/2019/12/29/hugo_html_not_shown/
+  # [markup.highlight]
+  #   codeFences = false # disables Hugo's default syntax highlighting
+  # [markup.goldmark.parser]
+  #   [markup.goldmark.parser.attribute]
+  #     block = true
+  #     title = true
 
-[[menu.primary]]
+[[menus.primary]]
     name  = "Docs"
     url = "/docs/"
     identifier = "docs"
     weight = 10
+    
+[params]
+  [params.docs]
+    sidebarIcons = true
+    breadcrumbs = true
+    backToTop = true
+    prism = true
+    prismTheme = "lotusdocs"
+    
+    # gitinfo
+    repoURL         = "https://github.com/AndyRaphael/docs.git"  # Git repository URL for your site 
+    repoBranch      = "master"
+    editPage        = true                                # enable 'Edit this page' feature - default false
+    lastMod         = true                                # enable 'Last modified' date on pages - default false
+    lastModRelative = true                                # format 'Last modified' time as relative - default true
+
