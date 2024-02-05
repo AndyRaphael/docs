@@ -1,7 +1,7 @@
 baseURL = 'https://andyraphael.github.io/docs/'
 languageCode = 'en-us'
 title = 'Andy Docs'
-contentDir = "content"
+#contentDir = "content"
 enableEmoji = true
 
 
