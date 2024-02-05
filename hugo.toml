@@ -3,9 +3,10 @@ languageCode = 'en-us'
 title = 'Andy Docs'
 #contentDir = "content"
 enableEmoji = true
-
+enableGitInfo = true
 
 [module]
+    replacements = "github.com/colinwilson/lotusdocs -> lotusdocs"
     [[module.imports]]
         path = "github.com/colinwilson/lotusdocs"
         disable = false
